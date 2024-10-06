@@ -9,7 +9,27 @@
 </head>
 
 </head>
+<Style>
 
+    h2{
+    color :Red;
+    text-align: center;
+    padding:70px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px; 
+      
+    }
+    .container img{
+        height: 380px;
+        width: 375px;
+    }
+
+
+</Style>
 
 
 
@@ -19,7 +39,20 @@
 {% include "navbar.html" %}
 
 
-About us page
+
+<h2>How to use</h2>
+<div class="container"  >
+    <img src="static\images\log.jpg" class="image" alt="login">
+  <ol>
+    <li>First create a account by Completing the Registration</li>
+    <li>Go to Home page then search the product you want to compare</li>
+  
+
+  </ol>
+</div>
+<!--    footer-->
+{% include "footer.html" %}
+
 </body>
 
 
