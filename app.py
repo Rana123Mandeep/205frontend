@@ -23,6 +23,10 @@ def register():
 @app.route("/test")
 def test():
     return render_template("footer.html")
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
 
 
 
