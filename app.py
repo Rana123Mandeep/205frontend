@@ -19,6 +19,11 @@ def shopping_list():
 def register():
     return render_template("register.html")
 
+#This route is for testing html templates
+@app.route("/test")
+def test():
+    return render_template("footer.html")
+
 
 
 

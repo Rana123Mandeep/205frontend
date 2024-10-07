@@ -16,15 +16,15 @@
     text-align: center;
     padding:70px;
     }
-    .container {
+    .imagebox{
       display: flex;
       justify-content: center;
       align-items: center;
       height: 300px; 
       
     }
-    .container img{
-        height: 380px;
+    .imagebox img{
+        height: 300px;
         width: 375px;
     }
 
@@ -38,18 +38,21 @@
 <!--Navbar-->
 {% include "navbar.html" %}
 
-
-
-<h2>How to use</h2>
-<div class="container"  >
-    <img src="static\images\log.jpg" class="image" alt="login">
-  <ol>
-    <li>First create a account by Completing the Registration</li>
-    <li>Go to Home page then search the product you want to compare</li>
+<div class="container">
+  <h2>How to use</h2>
+  <div class="imagebox"  >
+      <img src="static\images\log.jpg" class="image" alt="login">
+    <ol>
+      <li>First create a account by Completing the Registration</li>
+      <li>Go to Home page then search the product you want to compare</li>
+    
   
+    </ol>
+  </div>
 
-  </ol>
 </div>
+
+
 <!--    footer-->
 {% include "footer.html" %}
 
