@@ -21,16 +21,37 @@
     footer.container{
         justify-content: center;
         display: flex;
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        color:white;
     }
+
+    .labelBox{
+        height: 30px;
+        width: 100%;
+        
+    }
+    .labelBox a {
+  color: white; /* Added color: white to make the link text white */
+  text-decoration: none; /* Added text-decoration: none to remove the underline from the link */
+}
     </style>
+
+
+
 <body>
     <footer>
-        <div class="container">
-        <p>About</p>
-        <p>Login</p>
-        <p>Register</p>
-      </footer>
-    </div>
+        <div class="container d-flex">
+            <div class="labelBox">
+                <a href="" class="">About</a>
+            </div>
+            <div class="labelBox">
+                <a href="" class="">login</a>
+            </div>
+            <div class="labelBox">
+                <a href="" class="">Register</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
