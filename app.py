@@ -27,7 +27,9 @@ def test():
 def index():
     return render_template("index.html")
 
-
+@app.route("/datu")
+def datu():
+    return render_template("datu.html")
 
 
 
