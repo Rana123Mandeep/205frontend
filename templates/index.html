@@ -43,28 +43,32 @@
 }
 .product{
   background-color: #f9f9f9;
-	border: 1px solid #ccc;
+	border: 1px solid black;
 	margin-bottom: 20px;
 	padding: 20px;
-  width: 906px;
+  width: 1000px;
   height: 106px;
   display: flex
 
 }
-.container img{
+.mainCardBox img{
   height: 250px;
   width: 289px;
-   display: flex;
+   display:flex;
   border: 1px solid white;
   background-color: #f9f9f9;
-  margin-bottom: 20px;
+  margin-inline-end: auto;
+
+
+
 	padding: 20px; 
 }
-.container{
+.mainCardBox{
   border: 1px solid black;
   width: 913px;
   height: 324px;
   padding: 20px; 
+  
 }
 .product img{
   width: 80px;
@@ -77,29 +81,101 @@
   
 }
 .product p{
-  margin: auto;
+  
+  text-align:center;
+  margin-left: 200px;
+ 
 }
 .product p{
   justify-content: right;
-}
-.containh2{
-  
+  text-align:center;
+  margin-left: 200px;
 }
 
 .add-product{
   background-color: #f9f9f9;
-	border: 1px solid #ccc;
+	border: 1px solid black;
 	margin-bottom: 20px;
 	padding: 20px;
-  width: 906px;
+  width: 1000px;
   height: 106px;
+  display: flex;
+
+  text-align:center
   
   
 
 }
+.container p{
+  margin: auto;
+  justify-content: center;
+}
+
+.col1{
+  height: 400px;
+
+  justify-content: center;
+  align-items: center;
+}
 
 
 
+.col2{
+  height: 400px;
+}
+
+.imageBox{
+  width: 200px;
+  height: 200px;
+}
+
+.imageBox img{
+  max-width: 200px;
+  max-height: 200px;
+  }
+
+.row1{
+  height: 33%;
+  align-items: center;
+  }
+
+.row2{
+  height: 33%;
+}
+
+.row3{
+  height: 33%;
+  justify-content: end;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.row1 h2{
+  padding-left: 50px;
+}
+
+.row2 p{
+  padding-left: 50px;
+}
+
+.btn-circle.btn-sm { 
+  width: 30px; 
+  height: 30px; 
+  padding: 6px 0px; 
+  border-radius: 15px; 
+  font-size: 8px; 
+  text-align: center; 
+} 
+
+.mainCard{
+  border: 1px solid black; 
+}
+
+.breaker{
+  height: 20px;
+  width: 100vw;
+  background: white;
+}
 
 </style>
 <body>
@@ -109,31 +185,103 @@
   <form>
     <input type="text" placeholder="search products">
   </form>
-<div class ="container">
-  <img src="https://a.fsimg.co.nz/product/retail/fan/image/400x400/5003748.png" alt="green peas" class="rounded">
-  
- <h2>Green Peas</h2>
-			<p>Pams</p>
-      <p>Low Fat. Low Sodium. No Added Colours or Flavours. Source of Fibre. Snap Frozen for Freshness.</p>
-			<p>$2.99 </p>
-      <div class="product">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
-        <h2>New World</h2>
-        <p>$1.99</p>
+</div>
+
+
+<div class="container">
+
+  <div class="row mainCard">
+
+    <div class="col-md-4 col1 d-flex">
+      <div class="imageBox " >
+        <img src="https://a.fsimg.co.nz/product/retail/fan/image/400x400/5003748.png" alt="green peas" class="rounded">
+
       </div>
-      <div class="product">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
-        <h2>Pack-and-Save</h2>
-        <p>$1.99</p>
+
+    </div>
+
+    
+    <div class="col-md-8 col2">
+      <div class="row row1 d-flex">
+        <h2>Green Peas</h2>
       </div>
-      <div class="add-product">
-        <p>add another supermarket</p>
+
+      <div class="row row2">
+        <p>Low Fat. Low Sodium. No Added Colours or Flavours. Source of Fibre. Snap Frozen for Freshness.</p> 
       </div>
+
+      <div class="row row3 d-flex">
+        <button type="button" class="btn btn-success btn-circle btn-sm">+</button> 
+          
+
+      </div>
+
     </div>
   </div>
-  
+</div>
+
+<div class="breaker">
 
 </div>
+
+
+
+<div class="container d-flex justify-content-center">
+  <div class="smallCardBox">
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
+      <h2>New World</h2>
+      <p>$1.99</p>
+    </div>
+  
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
+      <h2>Pack-and-Save</h2>
+      <p>$1.99</p>
+    </div>
+  
+    <div class="add-product">
+      <p>add another supermarket</p>
+    </div>
+
+  </div>
+
+  
+</div>
+
+
+
+  
+
+  
+      
+  
+    
+   
+        <!-- <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
+          <h2>New World</h2>
+          <p>$1.99</p>
+        </div>
+        <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
+          <h2>Pack-and-Save</h2>
+          <p>$1.99</p>
+        </div>
+        <div class="add-product">
+          <p>add another supermarket</p>
+        </div>
+      </div> -->
+
+
+  <!-- </div>
+
+
+
+</div>
+   -->
+
+
 
 
 
