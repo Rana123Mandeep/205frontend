@@ -34,12 +34,72 @@
   border: none;
   background-color: rgba(192, 192, 192, 0.695);  
   border-radius: 30px;
+  text-align: center;
 
 }
 
 .search input[type="text"]::placeholder {
-  color:black; /* set the placeholder text color to white
+  color:black; 
 }
+.product{
+  background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	padding: 20px;
+  width: 906px;
+  height: 106px;
+  display: flex
+
+}
+.container img{
+  height: 250px;
+  width: 289px;
+   display: flex;
+  border: 1px solid white;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+	padding: 20px; 
+}
+.container{
+  border: 1px solid black;
+  width: 913px;
+  height: 324px;
+  padding: 20px; 
+}
+.product img{
+  width: 80px;
+  height: 80px;
+}
+ .product h2{
+  font-size: 20px;
+  text-align:center;
+  margin-left: 200px;
+  
+}
+.product p{
+  margin: auto;
+}
+.product p{
+  justify-content: right;
+}
+.containh2{
+  
+}
+
+.add-product{
+  background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	padding: 20px;
+  width: 906px;
+  height: 106px;
+  
+  
+
+}
+
+
+
 
 </style>
 <body>
@@ -49,10 +109,12 @@
   <form>
     <input type="text" placeholder="search products">
   </form>
-<div id ="product">
-  <img src="https://a.fsimg.co.nz/product/retail/fan/image/400x400/5003748.png"alt="product2">
-  <h2>Green Peas</h2>
+<div class ="container">
+  <img src="https://a.fsimg.co.nz/product/retail/fan/image/400x400/5003748.png" alt="green peas" class="rounded">
+  
+ <h2>Green Peas</h2>
 			<p>Pams</p>
+      <p>Low Fat. Low Sodium. No Added Colours or Flavours. Source of Fibre. Snap Frozen for Freshness.</p>
 			<p>$2.99 </p>
       <div class="product">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
@@ -61,18 +123,19 @@
       </div>
       <div class="product">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
-        <h2>Pacl-nd-Save</h2>
+        <h2>Pack-and-Save</h2>
         <p>$1.99</p>
       </div>
       <div class="add-product">
         <p>add another supermarket</p>
       </div>
     </div>
+  </div>
   
 
 </div>
 
-</div>
+
 
    
 </body>
