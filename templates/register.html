@@ -69,40 +69,43 @@
     <div class="container">
         <div class="test">
             <form>
-                <div class="form-group">
+                <div class="form needs-validation" novalidate>
                     <h2>Register</h2>
                     <div class="form-group">
                         <label for="exampleInputFirstname1">First Name</label>
-                        <input type="Firstname" class="form-control" id="exampleInputFirstname1">
+                        <input type="Firstname" class="form-control" id="exampleInputFirstname1" required>
                       </div>
                       <div class="form-group">
                         <label for="exampleInputSurname1">Surname</label>
-                        <input type="Surname" class="form-control" id="exampleInputSurname1">
+                        <input type="Surname" class="form-control" id="exampleInputSurname1"required>
                       </div>
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
                   
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="password" class="form-control" id="exampleInputPassword1"required>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputContactnumber1">Contact Number</label>
-                    <input type="contactnumber" class="form-control" id="exampleInputContactnumber1">
+                    <label for="exampleInputContactnumber1">Confirm Password</label>
+                    <input type="contactnumber" class="form-control" id="exampleInputContactnumber1"required>
                   </div>
 
 
                
 
 
-                <button type="button" class="btn btn-light">Sign in</button>
+                <button type="submit" class="btn btn-light">Sign in</button>
                
               </form>
-              <p class="Register">Alreay Register ?Sign in</p>
+              <a class="Register" href="/sign_in">Alreay Register ?Sign in</a>
         </div>
 
     </div>
+    <!--    footer-->
+{% include "footer.html" %}
+
 
 
 </body>

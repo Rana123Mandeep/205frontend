@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/sign_in")
 def home():
     return render_template("sign_in.html")
 
@@ -23,13 +23,9 @@ def register():
 @app.route("/test")
 def test():
     return render_template("footer.html")
-@app.route("/index")
+@app.route("/")
 def index():
     return render_template("index.html")
-
-@app.route("/shopping_list")
-def shopping_list():
-    return render_template("shopping_list.html")
 
 
 
