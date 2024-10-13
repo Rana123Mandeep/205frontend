@@ -27,9 +27,9 @@ def test():
 def index():
     return render_template("index.html")
 
-@app.route("/datu")
-def datu():
-    return render_template("datu.html")
+@app.route("/shopping_list")
+def shopping_list():
+    return render_template("shopping_list.html")
 
 
 
