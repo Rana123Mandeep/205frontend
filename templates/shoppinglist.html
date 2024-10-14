@@ -87,70 +87,65 @@ align-self: flex-end;
 }
 
 .imageBox{
-  width: 200px;
-  height: 200px;
+width: 200px;
+height: 200px;
 }
 
 .imageBox img{
-  max-width: 200px;
-  max-height: 200px;
-  }
+max-width: 200px;
+max-height: 200px;
+}
 
-  .product{
-  background-color: #f9f9f9;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	padding: 20px;
-  width: 1000px;
-  height: 106px;
-  display: flex
+.smallCardBox{
+  padding-top: 20px;
+  width:426px;
+}
+
+.product{
+background-color: #f9f9f9;
+border: 1px solid black;
+margin-bottom: 20px;
+padding: 20px;
+height: 106px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 
 }
 
 .product img{
-  width: 80px;
-  height: 80px;
+width: 80px;
+height: 80px;
 }
- .product h2{
-  font-size: 20px;
-  text-align:center;
-  margin-left: 200px;
-  
+.product h2{
+font-size: 20px;
+text-align:center;
 }
 .product p{
-  
-  text-align:center;
-  margin-left: 200px;
- 
+text-align:center;
 }
 .product p{
-  justify-content: right;
-  text-align:center;
-  margin-left: 200px;
+justify-content: right;
+text-align:center;
 }
 
 .add-product{
-  background-color: #f9f9f9;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	padding: 20px;
-  width: 1000px;
-  height: 106px;
-  display: flex;
-
-  text-align:center
-  
-  
-
+background-color: #f9f9f9;
+border: 1px solid black;
+margin-bottom: 20px;
+padding: 20px;
+height: 106px;
+display: flex;
+justify-content: space-between;
+text-align:center;
 }
+
 .container p{
-  margin: auto;
-  justify-content: center;
+margin: auto;
+justify-content: center;
 }
 
-.product{
-    width:326px;
-}
+
 
 
 
@@ -168,49 +163,113 @@ align-self: flex-end;
         </form>
       </div>
 
-    <div class="container">
-        <!--Start of List-->
-        <div class="outsideBox d-flex">
-            <div class="insideBox d-flex">
-                <div class="listBox d-flex">
-                    <div class="row listItem">
-                        <div class="col-sm-6 itemName">
-                            <p>ItemName</p>
-                        </div>
-                        <div class="col-sm-3 price">
-                            <p>$7.99</p>
-                        </div>
-                        <div class="col-sm-3 removeButton">
-                            <a>X</a>
-                        </div>
-                    </div>                    
-                </div>
+<div class="container-fluid d-flex justify-content-lg-around flex-wrap" >
 
-
-                <a class="emptybutton">empty list</a>
-                
+    <div class="smallCardBox m-3">
+      <!--Start of List-->
+      <div class="outsideBox d-flex">
+        <div class="insideBox d-flex">
+            <div class="listBox d-flex">
+                <div class="row listItem">
+                    <div class="col-sm-6 itemName">
+                        <p>ItemName</p>
+                    </div>
+                    <div class="col-sm-3 price">
+                        <p>$7.99</p>
+                    </div>
+                    <div class="col-sm-3 removeButton">
+                        <a>X</a>
+                    </div>
+                </div>                    
             </div>
-        </div>
-        <!--End of List-->
 
 
-        <div class="smallCardBox">
-            <div class="product">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
-              <h2>New World</h2>
-              <p>$1.99</p>
-            </div>
-            <div class="product">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
-                <h2>Pack-and-Save</h2>
-                <p>$1.99</p>
-              </div>
+            <a class="emptybutton">empty list</a>
             
-              <div class="add-product">
-                <p>add another supermarket</p>
-              </div>
-          
+        </div>
+      </div>
+      <!--End of List-->
+
+
+    <div class="product mt-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
+      <div class="storeNameBox">
+        <h2>New World</h2>
+      </div>
+      <div class="priceBox">
+        <p>$1.99</p>
+      </div>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
+        <div class="storeNameBox">
+          <h2>Pack-and-Save</h2>
+        </div>
+        <div class="priceBox">
+          <p>$1.99</p>
+        </div>
+      </div>
+    
+      <div class="add-product d-flex justify-content-center align-content-center">
+        <p>add another supermarket</p>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="smallCardBox m-3">
+      <!--Start of List-->
+      <div class="outsideBox d-flex">
+        <div class="insideBox d-flex">
+            <div class="listBox d-flex">
+                <div class="row listItem">
+                    <div class="col-sm-6 itemName">
+                        <p>ItemName</p>
+                    </div>
+                    <div class="col-sm-3 price">
+                        <p>$7.99</p>
+                    </div>
+                    <div class="col-sm-3 removeButton">
+                        <a>X</a>
+                    </div>
+                </div>                    
             </div>
+
+
+            <a class="emptybutton">empty list</a>
+            
+        </div>
+      </div>
+      <!--End of List-->
+
+
+    <div class="product mt-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
+      <div class="storeNameBox">
+        <h2>New World</h2>
+      </div>
+      <div class="priceBox">
+        <p>$1.99</p>
+      </div>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
+        <div class="storeNameBox">
+          <h2>Pack-and-Save</h2>
+        </div>
+        <div class="priceBox">
+          <p>$1.99</p>
+        </div>
+      </div>
+    
+      <div class="add-product d-flex justify-content-center align-content-center">
+        <p>add another supermarket</p>
+      </div>
+
+    </div>
 
 
 
