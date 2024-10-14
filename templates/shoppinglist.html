@@ -8,152 +8,143 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <style>
-    .search {
-  
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  margin: 40px;
 
+.search {
+justify-content: center;
+text-align: center;
+padding: 20px;
+margin: 40px;
 }
 
 .search form {
-  margin: auto;
-  padding: 0;
- 
+margin: auto;
+padding: 0;
 }
 
 .search input[type="text"] {
-  width: 664px;
-  height: 56px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: none;
-  background-color: rgba(192, 192, 192, 0.695);  
-  border-radius: 30px;
-  text-align: center;
-
+width: 664px;
+height: 56px;
+margin-bottom: 20px;
+padding: 10px;
+border: none;
+background-color: rgba(192, 192, 192, 0.695);  
+border-radius: 30px;
+text-align: center;
 }
 
 .search input[type="text"]::placeholder {
-  color:black;
-  
+color:black;
+
 }
 .outsideBox{
-    width: 369px;
-    height: 609px;
-    border: solid black;
-    justify-content: center;
-    align-items: center;
+width: 426px;
+height: 609px;
+border: solid black;
+justify-content: center;
+align-items: center;
 }
 
 .insideBox{
-    width:326px;
-    height: 548px;
-    border:solid black;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: space-between;
+width:326px;
+height: 548px;
+border:solid black;
+justify-content: center;
+flex-wrap: wrap;
+align-content: space-between;
 }
 
 .listBox{
-    height: 400px;
-    width: 100%;
-    overflow: hidden;
-    background: grey;
-    justify-content: center;
-    /*Need to add scrolling with no vidible scrollbar */
+height: 400px;
+width: 100%;
+overflow: hidden;
+background: grey;
+justify-content: center;
+/*Need to add scrolling with no vidible scrollbar */
 }
 
 .itemName{
-    height: 30px;
-    background:pink;
+height: 30px;
+background:pink;
 }
 
 .price{
-    height: 30px;
-    background:yellow;
+height: 30px;
+background:yellow;
 }
 
 .removeButton{
-    height: 30px;
-    background:green;
+height: 30px;
+background:green;
 }
 
 .listItem{
-    width: 273px;
-    padding-top: 10px;
+width: 273px;
+padding-top: 10px;
 }
 
 .emptybutton{
-    align-self: flex-end;
+align-self: flex-end;
 }
 
 .imageBox{
-  width: 200px;
-  height: 200px;
+width: 200px;
+height: 200px;
 }
 
 .imageBox img{
-  max-width: 200px;
-  max-height: 200px;
-  }
+max-width: 200px;
+max-height: 200px;
+}
 
-  .product{
-  background-color: #f9f9f9;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	padding: 20px;
-  width: 1000px;
-  height: 106px;
-  display: flex
+.smallCardBox{
+  width:426px;
+}
+
+.product{
+background-color: #f9f9f9;
+border: 1px solid black;
+margin-bottom: 20px;
+padding: 20px;
+height: 106px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 
 }
 
 .product img{
-  width: 80px;
-  height: 80px;
+width: 80px;
+height: 80px;
 }
- .product h2{
-  font-size: 20px;
-  text-align:center;
-  margin-left: 200px;
-  
+.product h2{
+font-size: 20px;
+text-align:center;
 }
 .product p{
-  
-  text-align:center;
-  margin-left: 200px;
- 
+text-align:center;
 }
 .product p{
-  justify-content: right;
-  text-align:center;
-  margin-left: 200px;
+justify-content: right;
+text-align:center;
 }
 
 .add-product{
-  background-color: #f9f9f9;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	padding: 20px;
-  width: 1000px;
-  height: 106px;
-  display: flex;
-
-  text-align:center
-  
-  
-
+background-color: #f9f9f9;
+border: 1px solid black;
+margin-bottom: 20px;
+padding: 20px;
+height: 106px;
+display: flex;
+justify-content: space-between;
+text-align:center;
 }
+
 .container p{
-  margin: auto;
-  justify-content: center;
+margin: auto;
+justify-content: center;
 }
 
-.product{
-    width:326px;
-}
+
 
 
 
@@ -200,13 +191,21 @@
         <div class="smallCardBox">
             <div class="product">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
-              <h2>New World</h2>
-              <p>$1.99</p>
+              <div class="storeNameBox">
+                <h2>New World</h2>
+              </div>
+              <div class="priceBox">
+                <p>$1.99</p>
+              </div>
             </div>
             <div class="product">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
-                <h2>Pack-and-Save</h2>
-                <p>$1.99</p>
+                <div class="storeNameBox">
+                  <h2>Pack-and-Save</h2>
+                </div>
+                <div class="priceBox">
+                  <p>$1.99</p>
+                </div>
               </div>
             
               <div class="add-product">
