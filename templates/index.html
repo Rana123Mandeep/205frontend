@@ -177,6 +177,11 @@
   background: white;
 }
 
+.supermarketBtn{
+  background: none;
+  border: none;
+}
+
 </style>
 <body>
     <!--Navbar-->
@@ -240,15 +245,15 @@
       <p>$1.99</p>
     </div>
   
-    <div class="add-product">
-      <p>add another supermarket</p>
+    <div class="add-product d-flex justify-content-center align-items-center" >
+      <form id="anotherSuperMarket" action="/anotherSuperMarket" method="POST">
+       <input type="submit" class="supermarketBtn" value="add another supermarket"></input>
+      </form>
     </div>
 
-  </div>
-
   
+  </div>
 </div>
-
 
 
   
@@ -289,5 +294,41 @@
 
    
 </body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
-</html>
+<script>
+
+$("idForm").submit(function(e){
+
+e.preventDefault();
+
+var form =$(this);
+var actionUrl = form.attr('action');
+
+$.ajax({
+type: "POST",
+url: actionUrl,
+data: form.serialize(), // serializes the form's elements.
+success: function(data)
+{
+  alert(data);
+}
+
+})});
+
+function submit(){
+$("#anotherSuperMarket").submit()
+}
+
+  
+  
+  
+  
+  
+  </script>
+
+  </html>

@@ -40,6 +40,10 @@ def signInAttempt():
 @app.route("/registerAttempt",methods=["POST"])
 def registerAttempt():
     return{"result":"Register complete"}
+
+@app.route("/anotherSuperMarket",methods=["POST"])
+def anothersuperMarket():
+    return{"result":"Here is new super amrket"}
     
 
 
