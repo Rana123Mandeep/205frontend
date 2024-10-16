@@ -28,6 +28,19 @@ def test():
 def index():
     return render_template("index.html")
 
+@app.route("/search")
+def search():
+    return render_template("search.html")
+
+#APIS FOR TESTING
+@app.route("/signInAttempt",methods=['POST'])
+def signInAttempt():
+    return {"result" : "It's working"}
+
+@app.route("/registerAttempt",methods=["POST"])
+def registerAttempt():
+    return{"result":"Register complete"}
+    
 
 
 if __name__ == "__main__":
