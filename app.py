@@ -48,6 +48,10 @@ def anothersuperMarket():
 @app.route("/addCart",methods=["POST"])
 def addCart():
     return{"result":"Product in Cart"}
+
+@app.route("/emptyList",methods=["POST"])
+def emptyList():
+    return{"result":"This list is empty"}
     
     
 
