@@ -44,6 +44,11 @@ def registerAttempt():
 @app.route("/anotherSuperMarket",methods=["POST"])
 def anothersuperMarket():
     return{"result":"Here is new super amrket"}
+
+@app.route("/addCart",methods=["POST"])
+def addCart():
+    return{"result":"Product in Cart"}
+    
     
 
 

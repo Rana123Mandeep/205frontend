@@ -216,8 +216,9 @@
       </div>
 
       <div class="row row3 d-flex">
-        <button type="button" class="btn btn-success btn-circle btn-sm">+</button> 
-          
+        <form id="addCart" action="/addCart" method="POST">
+        <input type="submit" class="btn btn-success btn-circle btn-sm" value="+"></input> 
+        </form>
 
       </div>
 
@@ -246,7 +247,7 @@
     </div>
   
     <div class="add-product d-flex justify-content-center align-items-center" >
-      <form id="anotherSuperMarket" action="/anotherSuperMarket" method="POST">
+    <form id="anotherSuperMarket" action="/anotherSuperMarket" method="POST">    <!-- This line shows Api <! -->
        <input type="submit" class="supermarketBtn" value="add another supermarket"></input>
       </form>
     </div>
@@ -322,6 +323,29 @@ success: function(data)
 
 function submit(){
 $("#anotherSuperMarket").submit()
+}
+
+
+$("idForm").submit(function(e){
+
+e.preventDefault();
+
+var form =$(this);
+var actionUrl = form.attr('action');
+
+$.ajax({
+type: "POST",
+url: actionUrl,
+data: form.serialize(), // serializes the form's elements.
+success: function(data)
+{
+  alert(data);
+}
+
+})});
+
+function submit(){
+$("#addCart").submit()
 }
 
   
