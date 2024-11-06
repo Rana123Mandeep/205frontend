@@ -9,23 +9,23 @@
 </head>
 </head>
 <style>
-  
-
+ 
+ 
   .search {
-  
+ 
   justify-content: center;
   text-align: center;
   padding: 20px;
   margin: 40px;
-
+ 
 }
-
+ 
 .search form {
   margin: auto;
   padding: 0;
  
 }
-
+ 
 .search input[type="text"] {
   width: 664px;
   height: 56px;
@@ -35,21 +35,21 @@
   background-color: rgba(192, 192, 192, 0.695);  
   border-radius: 30px;
   text-align: center;
-
+ 
 }
-
+ 
 .search input[type="text"]::placeholder {
-  color:black; 
+  color:black;
 }
 .product{
   background-color: #f9f9f9;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
   width: 1000px;
   height: 106px;
   display: flex
-
+ 
 }
 .mainCardBox img{
   height: 250px;
@@ -58,17 +58,17 @@
   border: 1px solid white;
   background-color: #f9f9f9;
   margin-inline-end: auto;
-
-
-
-	padding: 20px; 
+ 
+ 
+ 
+  padding: 20px;
 }
 .mainCardBox{
   border: 1px solid black;
   width: 913px;
   height: 324px;
-  padding: 20px; 
-  
+  padding: 20px;
+ 
 }
 .product img{
   width: 80px;
@@ -78,10 +78,10 @@
   font-size: 20px;
   text-align:center;
   margin-left: 200px;
-  
+ 
 }
 .product p{
-  
+ 
   text-align:center;
   margin-left: 200px;
  
@@ -91,178 +91,178 @@
   text-align:center;
   margin-left: 200px;
 }
-
+ 
 .add-product{
   background-color: #f9f9f9;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
   width: 1000px;
   height: 106px;
   display: flex;
-
+ 
   text-align:center
-  
-  
-
+ 
+ 
+ 
 }
 .container p{
   margin: auto;
   justify-content: center;
 }
-
+ 
 .col1{
   height: 400px;
-
+ 
   justify-content: center;
   align-items: center;
 }
-
-
-
+ 
+ 
+ 
 .col2{
   height: 400px;
 }
-
+ 
 .imageBox{
   width: 200px;
   height: 200px;
 }
-
+ 
 .imageBox img{
   max-width: 200px;
   max-height: 200px;
   }
-
+ 
 .row1{
   height: 33%;
   align-items: center;
   }
-
+ 
 .row2{
   height: 33%;
 }
-
+ 
 .row3{
   height: 33%;
   justify-content: end;
   align-items: center;
   padding-right: 50px;
 }
-
+ 
 .row1 h2{
   padding-left: 50px;
 }
-
+ 
 .row2 p{
   padding-left: 50px;
 }
-
-.btn-circle.btn-sm { 
-  width: 30px; 
-  height: 30px; 
-  padding: 6px 0px; 
-  border-radius: 15px; 
-  font-size: 8px; 
-  text-align: center; 
-} 
-
-.mainCard{
-  border: 1px solid black; 
+ 
+.btn-circle.btn-sm {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  font-size: 8px;
+  text-align: center;
 }
-
+ 
+.mainCard{
+  border: 1px solid black;
+}
+ 
 .breaker{
   height: 20px;
   width: 100vw;
   background: white;
 }
-
+ 
 .supermarketBtn{
   background: none;
   border: none;
 }
-
+ 
 </style>
 <body>
     <!--Navbar-->
 {% include "navbar.html" %}
 <div class="search">
-  <form>
-    <input type="text" placeholder="search products">
+  <form method="POST" action="/search">
+    <input type="text" name="searchterm" placeholder="search products" >
   </form>
 </div>
-
-
+ 
+ 
 <div class="container">
-
+ 
   <div class="row mainCard">
-
+ 
     <div class="col-md-4 col1 d-flex">
-      <div class="imageBox " >
-        <img src="https://a.fsimg.co.nz/product/retail/fan/image/400x400/5003748.png" alt="green peas" class="rounded">
-        
+      <div class="imageBox" id="mainImg">
+        <img src="{{main.img}}" alt="green peas" class="rounded">
+       
       </div>
-
+ 
     </div>
-
-    
+ 
+   
     <div class="col-md-8 col2">
       <div class="row row1 d-flex">
-        <h2>Green Peas</h2>
+        <h2 id="mainName">{{main.name}}</h2>
       </div>
-
+ 
       <div class="row row2">
-        <p>Low Fat. Low Sodium. No Added Colours or Flavours. Source of Fibre. Snap Frozen for Freshness.</p> 
+        <p>Low Fat. Low Sodium. No Added Colours or Flavours. Source of Fibre. Snap Frozen for Freshness.</p>
       </div>
-
+ 
       <div class="row row3 d-flex">
-        <form id="addCart" action="/addCart" method="POST">
-        <input type="submit" class="btn btn-success btn-circle btn-sm" value="+"></input> 
+        <form id="addCart" action="/addCart" method="GET">
+        <input type="submit" class="btn btn-success btn-circle btn-sm" value="+"></input>
         </form>
-
+ 
       </div>
-
+ 
     </div>
   </div>
 </div>
-
+ 
 <div class="breaker">
-
+ 
 </div>
-
-
-
+ 
+ 
+ 
 <div class="container d-flex justify-content-center">
   <div class="smallCardBox">
     <div class="product">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
-      <h2>New World</h2>
-      <p>$1.99</p>
+      <h2>Countdown</h2>
+      <p>${{main.dollars}}.{{main.cents}}</p>
     </div>
-  
+ 
     <div class="product">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kwWWSGxFGo7u8Af1qMHRBSpjjmoeXR5HA&s" alt="Pack and Save">
       <h2>Pack-and-Save</h2>
       <p>$1.99</p>
     </div>
-  
+ 
     <div class="add-product d-flex justify-content-center align-items-center" >
     <form id="anotherSuperMarket" action="/anotherSuperMarket" method="POST">    <!-- This line shows Api <! -->
        <input type="submit" class="supermarketBtn" value="add another supermarket"></input>
       </form>
     </div>
-
-  
+ 
+ 
   </div>
 </div>
-
-
-  
-
-  
-      
-  
-    
+ 
+ 
+ 
+ 
+ 
+     
+ 
+   
    
         <!-- <div class="product">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dpR-TiUrw0rzZRusW0wot7SXInT3VaferQ&s" alt="New World">
@@ -278,21 +278,21 @@
           <p>add another supermarket</p>
         </div>
       </div> -->
-
-
+ 
+ 
   <!-- </div>
-
-
-
+ 
+ 
+ 
 </div>
    -->
-
+ 
 <!--    footer-->
 {% include "footer.html" %}
-
-
-
-
+ 
+ 
+ 
+ 
    
 </body>
 <!-- Optional JavaScript -->
@@ -300,16 +300,16 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
+ 
 <script>
-
+ 
 $("idForm").submit(function(e){
-
+ 
 e.preventDefault();
-
+ 
 var form =$(this);
 var actionUrl = form.attr('action');
-
+ 
 $.ajax({
 type: "POST",
 url: actionUrl,
@@ -318,21 +318,21 @@ success: function(data)
 {
   alert(data);
 }
-
+ 
 })});
-
+ 
 function submit(){
 $("#anotherSuperMarket").submit()
 }
-
-
+ 
+ 
 $("idForm").submit(function(e){
-
+ 
 e.preventDefault();
-
+ 
 var form =$(this);
 var actionUrl = form.attr('action');
-
+ 
 $.ajax({
 type: "POST",
 url: actionUrl,
@@ -341,18 +341,36 @@ success: function(data)
 {
   alert(data);
 }
-
+ 
 })});
-
+ 
 function submit(){
 $("#addCart").submit()
 }
-
-  
-  
-  
-  
-  
+ 
+function checkOut(){
+ 
+  $.post("/product_info",
+  {
+    name: "Donald Duck",
+    city: "Duckburg"
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+ 
+ 
+}
+ 
+ 
+ 
+checkOut()
+ 
+ 
+ 
+ 
+ 
+ 
   </script>
-
+ 
   </html>
