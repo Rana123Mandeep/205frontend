@@ -72,11 +72,11 @@ def index_with_search(search):
     except:
         return redirect("/")
    
-@app.route("/product_info", methods=['POST'])
-def product_info():
-    # return "hello my g"
-    print("/productinfo func working")
-    return
+# @app.route("/product_info", methods=['POST'])
+# def product_info():
+#     # return "hello my g"
+#     print("/productinfo func working")
+#     return
        
 @app.route("/search", methods=['POST', 'GET'])
 def search():
